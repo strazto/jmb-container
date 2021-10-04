@@ -8,3 +8,6 @@ services:
     restart: unless-stopped
     volumes:
      - ./config:/jmb/config
+    environment:
+      BOT_TOKEN: "${BOT_TOKEN}"
+      BOT_OWNER: "${BOT_OWNER}"
