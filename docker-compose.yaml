@@ -3,11 +3,15 @@ version: '2.2'
 services:
   jmusicbot:
     # image: craumix/jmusicbot:latest
-    build: "."
+    build:
+      context: "."
+      args:
+        JMB_VERSION: "${JMB_VERSION}"
     container_name: jmusicbot
     restart: unless-stopped
     volumes:
      - ./config:/jmb/config
     environment:
+      JMB_VERSION: "${JMB_VERSION}"
       BOT_TOKEN: "${BOT_TOKEN}"
       BOT_OWNER: "${BOT_OWNER}"
