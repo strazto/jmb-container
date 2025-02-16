@@ -50,7 +50,7 @@ status = ONLINE
 // "Playing" status. Note that this will ONLY work if the bot is playing music on ONE guild;
 // if the bot is playing on multiple guilds, this will not work.
 
-songinstatus=false
+songinstatus=true
 
 
 // If you set this, the bot will also use this prefix in addition to
@@ -143,11 +143,11 @@ aliases {
   nowplaying = [ np, current ]
   play = [ p, >]
   playlists = [ pls ]
-  queue = [  ls, list ]
+  queue = [ q, ls, list ]
   remove = [ rm, delete ]
   scsearch = []
   search = [ ytsearch ]
-  shuffle = []
+  shuffle = [ ~ ]
   skip = [ voteskip, >> ]
 
   // Admin commands
