@@ -1,4 +1,11 @@
 FROM openjdk:11-jre-slim
+
+RUN apt-get update && \
+    apt-get install -y \
+      curl
+# Install docker
+RUN curl -fsSL https://get.docker.com | sh
+
 ARG JMB_VERSION 0.4.3.4
 ENV JMB_VERSION $JMB_VERSION
 

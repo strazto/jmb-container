@@ -11,6 +11,8 @@ services:
     restart: unless-stopped
     volumes:
      - ./config:/jmb/config
+     # Needs to run docker
+     - /var/run/docker.sock:/var/run/docker.sock
     environment:
       JMB_VERSION: "${JMB_VERSION}"
       BOT_TOKEN: "${BOT_TOKEN}"
